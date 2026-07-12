@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my skills, projects, experience, and journey as a Full Stack Developer. This portfolio serves as a central hub where visitors can explore my work, technical expertise, and get in touch with me.
 
-**Live Demo :** https://portfolio-animesh882.netlify.app/
+* **Live Demo :** https://portfolio-animesh882.netlify.app/
 
 ## 🚀 Features
 
@@ -37,7 +37,7 @@ This portfolio was built to showcase my development journey, highlight my projec
 
 ## 📬 Connect With Me
 
-* **GitHub:** https://github.com/animesh2008-projects
+
 * **LinkedIn:** https://www.linkedin.com/in/animesh-karmakar-91351536b/
 
 If you like this project, feel free to ⭐ the repository and share your feedback!
