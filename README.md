@@ -2,8 +2,7 @@
 
 A modern, responsive portfolio website showcasing my skills, projects, experience, and journey as a Full Stack Developer. This portfolio serves as a central hub where visitors can explore my work, technical expertise, and get in touch with me.
 
-# Live Demo:
-""https://portfolio-animesh882.netlify.app/""
+**Live Demo :** https://portfolio-animesh882.netlify.app/
 
 ## 🚀 Features
 
