@@ -1,0 +1,45 @@
+ANIMESH KARMAKAR
+Aspiring Developer | Problem Solver | Tech Enthusiast
+
+Email: animeshkarmakar882@gmail.com
+GitHub: https://github.com/animesh2008-projects
+LinkedIn: https://www.linkedin.com/in/animesh-karmakar-91351536b/
+
+PROFILE
+Motivated BCA student at ABS Academy of Management And Health Science with a strong interest in technology,
+programming, and software development. Focused on improving in Java, data structures, and modern web development
+through consistent learning and project building.
+
+EDUCATION
+- BCA, ABS Academy of Management And Health Science (2025 - 2028)
+- Higher Secondary (12th), BAHULA SASHI SMRITI HIGH SCHOOL (2023 - 2025)
+- Secondary (10th), Baidyanathpur High School (2023)
+
+SKILLS
+- Java
+- Data Structures
+- HTML
+- CSS
+- JavaScript
+- Web Development
+- Problem Solving
+
+PROJECTS
+- Library Management System
+  Structured system for managing books, users, and issue records.
+
+- Online Quiz System
+  Interactive project for quiz delivery, answer checking, and learner-focused workflows.
+
+- Animated Calculator
+  Responsive calculator with polished animations and frontend interactivity.
+
+- Speech Recognition Tool
+  Browser-based tool exploring voice input and speech-driven interaction.
+
+- Strong Password Generator API Security Tool
+  Utility focused on generating stronger passwords and supporting better security practices.
+
+GOAL
+To become a strong software developer by building practical applications, improving problem-solving ability,
+and creating polished digital experiences.

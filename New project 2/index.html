@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="assets/favicon-64.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website of Animesh Karmakar, a BCA student at ABS Academy of Management And Health Science with a passion for programming and software development.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Animesh Karmakar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scrollProgress"></span>
+  </div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">AK</div>
+    <div class="loader__bar"><span></span></div>
+    <p>Launching portfolio experience...</p>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="gradient-orb gradient-orb--one" aria-hidden="true"></div>
+  <div class="gradient-orb gradient-orb--two" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home" aria-label="Go to homepage">
+        <span class="brand__mark">AK</span>
+        <span class="brand__text">Animesh Karmakar</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home" data-terminal="~/portfolio/home">
+      <div class="container hero__layout">
+        <div class="hero__content" data-reveal>
+          <span class="eyebrow">BCA Student at ABS Academy of Management And Health Science</span>
+          <h1>Hi, I'm <span class="gradient-text">Animesh</span> - Developer | Problem Solver | Tech Enthusiast</h1>
+          <p class="hero__typing">I enjoy building as a <span id="typedRole"></span><span class="typing-cursor">|</span></p>
+          <p class="hero__description">
+            I'm focused on turning curiosity into working software through Java, data structures, and modern web development.
+            I enjoy building useful tools, sharpening problem-solving skills, and growing into a thoughtful developer.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--secondary" href="#contact">Contact Me</a>
+            <a class="btn btn--ghost" href="assets/animesh-karmakar-cv.pdf" download>Download Resume</a>
+          </div>
+
+          <div class="terminal-strip glass-card" data-reveal>
+            <div class="terminal-strip__top">
+              <span class="terminal-strip__signal"></span>
+              <span class="terminal-strip__label">animesh@portfolio:~</span>
+            </div>
+            <div class="terminal-strip__body">
+              <p class="terminal-strip__line">
+                <span class="terminal-prompt">$</span>
+                <span id="commandInput">npm run build-portfolio</span>
+              </p>
+              <p class="terminal-strip__output" id="commandOutput">Compiling ideas into polished project experiences...</p>
+            </div>
+          </div>
+
+          <div class="hero__stats">
+            <article class="stat-card" data-reveal>
+              <strong class="stat-card__number" data-target="5" data-suffix="+">0</strong>
+              <span class="stat-card__label">Featured Projects</span>
+            </article>
+            <article class="stat-card" data-reveal>
+              <strong class="stat-card__number" data-target="3" data-suffix="+">0</strong>
+              <span class="stat-card__label">Core Focus Areas</span>
+            </article>
+            <article class="stat-card" data-reveal>
+              <strong class="stat-card__number" data-target="2025" data-suffix="">0</strong>
+              <span class="stat-card__label">Started BCA Journey</span>
+            </article>
+          </div>
+
+          <div class="tech-tape" data-reveal aria-label="Technology highlights">
+            <div class="tech-tape__track">
+              <span>JAVA</span>
+              <span>DSA</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JAVASCRIPT</span>
+              <span>PROBLEM SOLVING</span>
+              <span>UI MOTION</span>
+              <span>SOFTWARE DEVELOPMENT</span>
+              <span>JAVA</span>
+              <span>DSA</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JAVASCRIPT</span>
+              <span>PROBLEM SOLVING</span>
+              <span>UI MOTION</span>
+              <span>SOFTWARE DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="hero-card" id="heroCard">
+            <div class="hero-card__top">
+              <span class="hero-card__dot hero-card__dot--red"></span>
+              <span class="hero-card__dot hero-card__dot--amber"></span>
+              <span class="hero-card__dot hero-card__dot--green"></span>
+            </div>
+            <div class="hero-card__portrait">
+              <img src="assets/animesh-profile.jpeg" alt="Portrait of Animesh Karmakar" width="1440" height="1440" decoding="async" fetchpriority="high">
+              <div class="hero-card__badge">
+                <span>Developer in Progress</span>
+                <strong>ABS Academy</strong>
+              </div>
+            </div>
+            <div class="hero-card__body">
+              <p class="hero-card__title">Profile Snapshot</p>
+              <div class="hero-card__identity">
+                <h3>Animesh Karmakar</h3>
+                <p>BCA student with a strong interest in software development, problem solving, and modern web experiences.</p>
+              </div>
+              <div class="hero-card__info">
+                <div class="hero-card__info-item">
+                  <span>Focus</span>
+                  <strong>Java, DSA, Web Dev</strong>
+                </div>
+                <div class="hero-card__info-item">
+                  <span>Goal</span>
+                  <strong>Build useful, polished software</strong>
+                </div>
+              </div>
+              <div class="hero-card__chips">
+                <span>Java</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-panel floating-panel--one">
+            <strong>Open to Growth</strong>
+            <span>Learning by building and improving every project.</span>
+          </div>
+          <div class="floating-panel floating-panel--two">
+            <strong>Mindset</strong>
+            <span>Curious, consistent, and detail-oriented.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" data-terminal="~/portfolio/about">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">About Me</span>
+          <h2>Building skills with curiosity, consistency, and real project work.</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="glass-card about-card about-card--intro" data-reveal>
+            <h3>Who I Am</h3>
+            <p>
+              I'm Animesh Karmakar, a BCA student who enjoys exploring how software can solve practical problems.
+              My interest in technology comes from building projects that combine logic, usability, and clean design.
+            </p>
+          </article>
+
+          <article class="glass-card about-card" data-reveal>
+            <h3>How I Work</h3>
+            <p>
+              I like learning deeply, writing better code over time, and improving through experimentation.
+              Whether it's a Java-based system or an interactive web interface, I aim to build with purpose.
+            </p>
+          </article>
+
+          <article class="glass-card about-card" data-reveal>
+            <h3>What I'm Growing Toward</h3>
+            <p>
+              My goal is to become a strong software developer with solid foundations in programming, data structures,
+              and full-stack development while creating projects that feel modern and useful.
+            </p>
+          </article>
+
+          <article class="glass-card about-highlights" data-reveal>
+            <h3>Highlights</h3>
+            <ul>
+              <li>Focused on Java, DSA, and frontend development</li>
+              <li>Enjoys creating tools with clean UI and practical value</li>
+              <li>Interested in software engineering and continuous learning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" data-terminal="~/portfolio/skills">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">Skills</span>
+          <h2>Core technologies I'm using to build stronger software foundations.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="glass-card skill-card" data-reveal data-skill="JAVA" style="--progress: 88;">
+            <div class="skill-card__meter">
+              <span>88%</span>
+            </div>
+            <h3>Java</h3>
+            <p>Object-oriented programming, core logic, and project-based application development.</p>
+          </article>
+
+          <article class="glass-card skill-card" data-reveal data-skill="DSA" style="--progress: 82;">
+            <div class="skill-card__meter">
+              <span>82%</span>
+            </div>
+            <h3>Data Structures</h3>
+            <p>Strengthening algorithmic thinking and improving problem-solving efficiency.</p>
+          </article>
+
+          <article class="glass-card skill-card" data-reveal data-skill="HTML" style="--progress: 90;">
+            <div class="skill-card__meter">
+              <span>90%</span>
+            </div>
+            <h3>HTML</h3>
+            <p>Building semantic, accessible, and well-structured page layouts.</p>
+          </article>
+
+          <article class="glass-card skill-card" data-reveal data-skill="CSS" style="--progress: 86;">
+            <div class="skill-card__meter">
+              <span>86%</span>
+            </div>
+            <h3>CSS</h3>
+            <p>Crafting responsive interfaces, motion details, and polished visual systems.</p>
+          </article>
+
+          <article class="glass-card skill-card" data-reveal data-skill="JAVASCRIPT" style="--progress: 84;">
+            <div class="skill-card__meter">
+              <span>84%</span>
+            </div>
+            <h3>JavaScript</h3>
+            <p>Adding interactivity, animations, and dynamic user experiences to the web.</p>
+          </article>
+
+          <article class="glass-card skill-card" data-reveal data-skill="WEB" style="--progress: 80;">
+            <div class="skill-card__meter">
+              <span>80%</span>
+            </div>
+            <h3>Web Development</h3>
+            <p>Combining design and logic to create smooth, engaging, and fast-loading interfaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" data-terminal="~/portfolio/projects">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">Projects</span>
+          <h2>Projects that reflect my learning, curiosity, and practical development approach.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="glass-card project-card" data-reveal>
+            <div class="project-card__meta">01</div>
+            <h3>Library Management System</h3>
+            <p>A structured system to manage books, users, issue records, and library operations more efficiently.</p>
+            <div class="tag-list">
+              <span>Java</span>
+              <span>OOP</span>
+              <span>Database Logic</span>
+            </div>
+            <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+
+          <article class="glass-card project-card" data-reveal>
+            <div class="project-card__meta">02</div>
+            <h3>Online Quiz System</h3>
+            <p>An academic project for delivering quizzes, checking answers, and improving user interaction for learners.</p>
+            <div class="tag-list">
+              <span>Java</span>
+              <span>Logic Design</span>
+              <span>UI Flow</span>
+            </div>
+            <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+
+          <article class="glass-card project-card" data-reveal>
+            <div class="project-card__meta">03</div>
+            <h3>Animated Calculator</h3>
+            <p>A calculator interface that combines utility with responsive design and engaging motion details.</p>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+
+          <article class="glass-card project-card" data-reveal>
+            <div class="project-card__meta">04</div>
+            <h3>Speech Recognition Tool</h3>
+            <p>A tool exploring voice-driven input and browser-based interaction for a more accessible experience.</p>
+            <div class="tag-list">
+              <span>JavaScript</span>
+              <span>Speech API</span>
+              <span>Accessibility</span>
+            </div>
+            <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+
+          <article class="glass-card project-card" data-reveal>
+            <div class="project-card__meta">05</div>
+            <h3>Strong Password Generator API Security Tool</h3>
+            <p>A security-focused utility for generating stronger passwords and encouraging better credential practices.</p>
+            <div class="tag-list">
+              <span>JavaScript</span>
+              <span>API Logic</span>
+              <span>Security</span>
+            </div>
+            <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" data-terminal="~/portfolio/education">
+      <div class="container education-layout">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">Education</span>
+          <h2>My academic journey and the milestones shaping my developer path.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item glass-card" data-reveal>
+            <span class="timeline__year">2025 - 2028</span>
+            <h3>BCA</h3>
+            <p>ABS Academy of Management And Health Science</p>
+            <small>Focused on programming, software development, and building strong technical foundations.</small>
+          </article>
+
+          <article class="timeline__item glass-card" data-reveal>
+            <span class="timeline__year">2023 - 2025</span>
+            <h3>Higher Secondary (12th)</h3>
+            <p>BAHULA SASHI SMRITI HIGH SCHOOL</p>
+            <small>Strengthened academic discipline while preparing for a future in technology.</small>
+          </article>
+
+          <article class="timeline__item glass-card" data-reveal>
+            <span class="timeline__year">2023</span>
+            <h3>Secondary (10th)</h3>
+            <p>Baidyanathpur High School</p>
+            <small>Completed core schooling and began shaping a stronger interest in computers and problem solving.</small>
+          </article>
+        </div>
+
+        <aside class="glass-card achievements-card" data-reveal>
+          <h3>Growth Highlights</h3>
+          <ul>
+            <li>Built a portfolio of academic and practical software projects</li>
+            <li>Developing confidence in Java, DSA, and frontend interfaces</li>
+            <li>Committed to becoming a dependable software developer</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="resume" data-terminal="~/portfolio/resume">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">Resume</span>
+          <h2>My updated CV is ready to download and share.</h2>
+        </div>
+
+        <div class="resume-grid">
+          <article class="glass-card resume-card" data-reveal>
+            <span class="resume-card__eyebrow">PDF Resume</span>
+            <h3>Animesh Karmakar CV</h3>
+            <p>
+              This updated resume includes my academic background, technical skills, project experience,
+              and the profile details I am building as an aspiring software developer.
+            </p>
+            <div class="resume-meta">
+              <span>PDF Format</span>
+              <span>Ready to Download</span>
+              <span>Portfolio Linked</span>
+            </div>
+            <div class="resume-actions">
+              <a class="btn btn--primary" href="assets/CV Animesh Karmakar.pdf" download>Download CV</a>
+              <a class="btn btn--secondary" href="assets/CV Animesh Karmakar.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+            </div>
+          </article>
+
+          <article class="glass-card resume-highlights" data-reveal>
+            <h3>What It Covers</h3>
+            <ul>
+              <li>Education journey from school to BCA</li>
+              <li>Core strengths in Java, DSA, and web development</li>
+              <li>Project highlights and developer-focused goals</li>
+              <li>Professional contact links for GitHub, LinkedIn, and email</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" data-terminal="~/portfolio/contact">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="section-heading__eyebrow">Contact</span>
+          <h2>Let's connect about projects, learning, and future opportunities.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="glass-card contact-card" data-reveal>
+            <h3>Send a Message</h3>
+            <form id="contactForm" class="contact-form">
+              <label>
+                <span>Name</span>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+              </label>
+              <button class="btn btn--primary btn--full" type="submit">Send Message</button>
+              <p class="form-note" id="formNote">This form opens your default email app with the message filled in.</p>
+            </form>
+          </article>
+
+          <article class="glass-card contact-info" data-reveal>
+            <h3>Reach Out</h3>
+            <p>I'm always excited to learn, collaborate, and connect with people who love building with technology.</p>
+
+            <div class="contact-info__list">
+              <a href="mailto:animeshkarmakar882@gmail.com">animeshkarmakar882@gmail.com</a>
+              <a href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">GitHub Profile</a>
+              <a href="https://www.linkedin.com/in/animesh-karmakar-91351536b/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+            </div>
+
+            <div class="social-row">
+              <a class="social-pill" href="https://github.com/animesh2008-projects" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="social-pill" href="https://www.linkedin.com/in/animesh-karmakar-91351536b/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="social-pill" href="mailto:animeshkarmakar882@gmail.com">Email</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Designed and built for Animesh Karmakar.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <span>&uarr;</span>
+  </button>
+
+ 
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
